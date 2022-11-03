@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import './list_on_going.dart';
+import './on_going_text.dart';
+
 class OnGoingItem extends StatelessWidget {
   const OnGoingItem({
     Key? key,
@@ -29,22 +32,9 @@ class OnGoingItem extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(height: 15),
-            Row(
-              children: <Widget>[
-                Text(
-                  'on going',
-                  style: TextStyle(
-                    fontSize: 20,
-                  ),
-                ),
-                SizedBox(width: 5),
-                Container(
-                  width: 8,
-                  height: 8,
-                  color: Colors.orange,
-                )
-              ],
-            )
+            OnGoingText(),
+            SizedBox(height: 10),
+            ListOnGoing(size: size)
           ],
         ),
       ),
