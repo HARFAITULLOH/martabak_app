@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
 
-import '../modules/home/pages/home_page.dart';
-import '../modules/list/pages/list_page.dart';
 import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/pages/home_page.dart';
 import '../modules/list/bindings/list_binding.dart';
+import '../modules/list/pages/list_page.dart';
+import '../modules/menu/bindings/menu_binding.dart';
+import '../modules/menu/pages/menu_page.dart';
+
 part './app_routes.dart';
 
 class AppPages {
@@ -21,6 +24,11 @@ class AppPages {
       name: _Paths.LIST,
       page: () => const ListPage(),
       binding: ListBinding(),
+    ),
+    GetPage(
+      name: _Paths.MENU,
+      page: () => const MenuPage(),
+      binding: MenuBinding(),
     ),
   ];
 }

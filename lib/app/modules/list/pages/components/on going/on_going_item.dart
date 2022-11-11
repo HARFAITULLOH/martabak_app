@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import './list_on_going.dart';
 import './on_going_text.dart';
+import '../../../../menu/controllers/menu_controller.dart';
 
 class OnGoingItem extends StatelessWidget {
   const OnGoingItem({
@@ -13,6 +15,7 @@ class OnGoingItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final menuC = Get.find<MenuController>();
     return Container(
       width: size.width - 28,
       height: (size.height / 2) - 42,
@@ -28,12 +31,11 @@ class OnGoingItem extends StatelessWidget {
         ],
       ),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: EdgeInsets.symmetric(horizontal: 14),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 15),
+            // SizedBox(height: 15),
             OnGoingText(),
-            SizedBox(height: 10),
             ListOnGoing(size: size)
           ],
         ),
